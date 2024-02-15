@@ -56,7 +56,6 @@ class Example extends Phaser.Scene {
         //  Every 200 pixels we'll generate a new chunk of land
         if (this.offset >= 200) {
             //  We need to generate a new section of the land as we've run out
-            let ty = Phaser.Math.Between(200, 100);
             let by = Phaser.Math.Between(400, 500);
 
             const bottomEnd = this.bottomPath.getEndPoint();
