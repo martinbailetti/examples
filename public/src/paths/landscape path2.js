@@ -18,27 +18,17 @@ class Example extends Phaser.Scene {
             Phaser.Math.Between(400, 500)
         );
 
-        this.currentX = 100;
+        this.currentX = 600;
 
-        this.plane = this.add.image(100, 300, "plane");
-
-        /*     this.input.on('pointermove', pointer => {
-
-            this.plane.x = pointer.worldX;
-            this.plane.y = pointer.worldY;
-
-        }); */
+        this.plane = this.add.image(600, 300, "plane");
 
         //  Create a random land which is 1000px long (800 for our screen size + 200 buffer)
 
-        let ty = Phaser.Math.Between(200, 100);
-        let by = Phaser.Math.Between(400, 500);
 
         for (let x = 200; x <= 1000; x += 200) {
+            let by = Phaser.Math.Between(400, 500);
             this.bottomPath.lineTo(x, by);
 
-            ty = Phaser.Math.Between(200, 100);
-            by = Phaser.Math.Between(400, 500);
         }
 
         this.offset = 0;
